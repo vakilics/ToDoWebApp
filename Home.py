@@ -1,12 +1,12 @@
 '''
 - Easty to integrate with web apps using "stramlit"
-- Run the web-app: streamlit run web.py
+- Run the web-app: streamlit run Home.py
 - By refreshing the web page, python code will be executed from top to button!
 NOTE: to publish the web_app:
  1. Collect the running requirements existing in machine where this app is running:
     * pip freeze > requirements.txt  # this includes all python-modules required for server which runs the web app!
     * add this file to the project directory
-    * then run the app again (streamlit run web.py)
+    * then run the app again (streamlit run Home.py)
     * In wep page: in Menu ->  Deploy this app
 '''
 
@@ -14,6 +14,8 @@ import streamlit as st
 import functions
 
 todos = functions.get_todos()
+
+st.set_page_config(layout="wide") #to resize in browser
 def add_todo():
     todo = st.session_state["my_new_todo"] + "\n"
     #print(todo)
@@ -21,8 +23,9 @@ def add_todo():
     functions.write_todos(todos)
 
 st.title("Welcome Vakili's To-Do Web App!")
-st.subheader("This is my todo app!")
-st.write("This App helps manage your tasks! ")
+st.subheader("This is a To-Do app!")
+st.write("This App helps <b>manage your tasks!</b>",
+         unsafe_allow_html=True) #simply use html tags!
 
 for index, todo in enumerate(todos):
     #st.checkbox(todo, key=todo) #will show each checkbox status
