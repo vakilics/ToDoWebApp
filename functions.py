@@ -1,6 +1,6 @@
 #Functions that will be used in other modules
 
-FILE_PATH = "/home/avakili/Dokumente/Univention/Kurses/Python/Udemy/pythonProject/Depoprj/ToDoWebApp/todos.txt"
+FILE_PATH = "todos.txt"
 
 def get_todos(filename=FILE_PATH):
     with open(filename, 'r') as file_local:
