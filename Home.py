@@ -22,7 +22,7 @@ def add_todo():
     todos.append(todo)
     functions.write_todos(todos)
 
-st.title("Welcome Vakili's To-Do Web App!")
+st.title("Welcome Simple To-Do Web App!")
 st.subheader("This is a To-Do app!")
 st.write("This App helps <b>manage your tasks!</b>",
          unsafe_allow_html=True) #simply use html tags!
