@@ -11,6 +11,7 @@ NOTE: to publish the web_app:
 '''
 
 import streamlit as st
+
 import functions
 
 todos = functions.get_todos()
@@ -22,9 +23,9 @@ def add_todo():
     todos.append(todo)
     functions.write_todos(todos)
 
-st.title("Welcome Simple To-Do Web App!")
-st.subheader("This is a To-Do app!")
-st.write("This App helps <b>manage your tasks!</b>",
+st.title("Welcome to Vakili's To-Do Web App!")
+st.subheader("Let's log!")
+st.write("<b>My To-Do list: ",
          unsafe_allow_html=True) #simply use html tags!
 
 for index, todo in enumerate(todos):

@@ -1,3 +1,4 @@
 One
 setup
-another to do
+three
+Go!
