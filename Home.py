@@ -23,7 +23,7 @@ def add_todo():
     todos.append(todo)
     functions.write_todos(todos)
 
-st.title("Welcome to Vakili's To-Do Web App!")
+st.title(":green[Welcome to Vakili's To-Do Web App!]")
 st.subheader("Let's log!")
 st.write("<b>My To-Do list: ",
          unsafe_allow_html=True) #simply use html tags!
@@ -38,7 +38,7 @@ for index, todo in enumerate(todos):
         del st.session_state[todo]
         st.experimental_rerun()
 
-st.text_input(label="Add To-DO!", placeholder="something...", on_change=add_todo, key='my_new_todo')
+st.text_input(label=":green[Add To-DO!]", placeholder="something...", on_change=add_todo, key='my_new_todo:')
 
 #print("End of App!")
 st.session_state
